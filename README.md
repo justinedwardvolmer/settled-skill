@@ -15,7 +15,7 @@ That adds the MCP server `https://settled.tools/mcp` (18 tools, free tier of 300
 
 ## Any other agent (Managed Agents, Agent SDK, OpenClaw, your own harness)
 
-Copy `plugins/settled/skills/settled-x402/` into your skills directory, or download the packaged skill from https://settled.tools/skills/settled-x402.skill. The skill is three files: `SKILL.md` (the rule and the decision table), `references/api.md` (field reference) and `scripts/settled_check.py` (standard-library script that prints a one-line decision; exit code 0 pay, 1 caution, 2 do not pay).
+Copy `plugins/settled/skills/settled-x402/` into your skills directory, download the packaged skill from https://settled.tools/skills/settled-x402.skill, or, if you already use the npm package, run `npx settled-x402 skill install` (`--global` for `~/.claude/skills`, `--to <dir>` for any skills folder). The skill is three files: `SKILL.md` (the rule and the decision table), `references/api.md` (field reference) and `scripts/settled_check.py` (standard-library script that prints a one-line decision; exit code 0 pay, 1 caution, 2 do not pay).
 
 MCP server: `https://settled.tools/mcp` (Streamable HTTP). HTTP: https://settled.tools/llms.txt. npm: [`settled-x402`](https://www.npmjs.com/package/settled-x402) guards every x402 payment in code.
 
