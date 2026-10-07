@@ -1,0 +1,10 @@
+{
+  "name": "settled",
+  "version": "1.0.0",
+  "description": "Check any x402 endpoint with Settled before your agent pays it; preflight for a pay / caution / avoid verdict; report afterwards; see which venues actually pay agents. Free up to 300 checks a day, no key.",
+  "author": { "name": "Settled", "url": "https://settled.tools" },
+  "homepage": "https://settled.tools/for-agents",
+  "repository": "https://github.com/justinedwardvolmer/settled-skill",
+  "license": "MIT",
+  "keywords": ["x402", "agents", "payments", "usdc", "base", "mcp"]
+}

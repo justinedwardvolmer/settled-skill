@@ -1,0 +1,16 @@
+{
+  "name": "settled",
+  "owner": { "name": "Settled", "url": "https://settled.tools" },
+  "metadata": { "description": "Settled: check any x402 endpoint before an agent pays it, and find out which venues actually pay agents.", "version": "1.0.0" },
+  "plugins": [
+    {
+      "name": "settled",
+      "source": "./plugins/settled",
+      "description": "Adds the Settled MCP server (https://settled.tools/mcp) and the settled-x402 skill: check an x402 endpoint before paying, preflight for a pay/caution/avoid verdict, report afterwards, and the venue scorecard.",
+      "version": "1.0.0",
+      "author": { "name": "Settled", "url": "https://settled.tools" },
+      "homepage": "https://settled.tools/for-agents",
+      "keywords": ["x402", "agents", "payments", "usdc", "base", "mcp", "verification"]
+    }
+  ]
+}

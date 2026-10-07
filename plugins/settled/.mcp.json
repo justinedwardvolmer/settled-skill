@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "settled": {
+      "type": "http",
+      "url": "https://settled.tools/mcp"
+    }
+  }
+}
