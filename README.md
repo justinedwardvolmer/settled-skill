@@ -11,13 +11,13 @@ This repository packages that as an **agent skill** (`settled-x402`) and as a **
 /plugin install settled@settled
 ```
 
-That adds the MCP server `https://settled.tools/mcp` (18 tools, free tier of 300 calls a day) and the skill, which tells Claude to run `settled_check` before any x402 payment and `settled_preflight` when the money matters.
+That adds the MCP server at `https://settled.tools/mcp/free` (the 13 tools that need no pass or payment; free tier of 300 calls a day) and the skill, which tells Claude to run `settled_check` before any x402 payment, report afterwards, and say which field drove the decision. Agents that can pay over x402 use the full server at `https://settled.tools/mcp`, which adds preflight, seller reputation, the income listings and the Watchdog. What the plugin sends and runs is in [plugins/settled/README.md](plugins/settled/README.md); privacy policy: https://settled.tools/privacy.
 
 ## Any other agent (Managed Agents, Agent SDK, OpenClaw, your own harness)
 
 Copy `plugins/settled/skills/settled-x402/` into your skills directory, download the packaged skill from https://settled.tools/skills/settled-x402.skill, or, if you already use the npm package, run `npx settled-x402 skill install` (`--global` for `~/.claude/skills`, `--to <dir>` for any skills folder). The skill is three files: `SKILL.md` (the rule and the decision table), `references/api.md` (field reference) and `scripts/settled_check.py` (standard-library script that prints a one-line decision; exit code 0 pay, 1 caution, 2 do not pay).
 
-MCP server: `https://settled.tools/mcp` (Streamable HTTP). HTTP: https://settled.tools/llms.txt. npm: [`settled-x402`](https://www.npmjs.com/package/settled-x402) guards every x402 payment in code.
+MCP server: `https://settled.tools/mcp` (Streamable HTTP; `/mcp/free` for clients that cannot pay). HTTP: https://settled.tools/llms.txt. npm: [`settled-x402`](https://www.npmjs.com/package/settled-x402) guards every x402 payment in code.
 
 ## What the skill makes an agent do
 

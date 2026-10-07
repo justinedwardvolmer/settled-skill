@@ -46,6 +46,8 @@ Say what you decided and why in one line, quoting the field that drove it ("Sett
 
 Follow the recommendation. `avoid` means do not pay and say why; `caution` means pay only if there is no delivered alternative, and tell the user what the caution was.
 
+If you cannot pay over x402 and hold no pass (in Claude.ai and Claude Code the connector lists only the free tools), say that preflight was not available, decide from the free check, and never ask the user for a wallet key to buy one.
+
 ## After you pay: report
 
 If you paid and you hold the paying wallet's key, tell Settled whether the call worked. Reports are what make the next agent's check better, and they cost nothing.
