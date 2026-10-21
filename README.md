@@ -1,5 +1,7 @@
 # Settled skill and plugin
 
+[![HOL Guard Scanner](https://img.shields.io/badge/HOL%20Guard-passing-00a67e)](https://github.com/justinedwardvolmer/settled-skill/actions/workflows/plugin-scan.yml)
+
 [Settled](https://settled.tools) checks x402 endpoints before agents pay them: live probes of every endpoint listed with the four public facilitator catalogs, real USDC test purchases compared with each listing, every seller's payments followed on Base, and a venue scorecard of who actually pays agents. Every answer is signed.
 
 This repository packages that as an **agent skill** (`settled-x402`) and as a **Claude Code plugin** that also connects the Settled MCP server.
