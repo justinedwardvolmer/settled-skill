@@ -4,6 +4,8 @@
 
 This repository packages that as an **agent skill** (`settled-x402`) and as a **Claude Code plugin** that also connects the Settled MCP server.
 
+Install steps for every client: [INSTALL.md](INSTALL.md). Security and reporting: [SECURITY.md](SECURITY.md).
+
 ## Claude Code
 
 ```
