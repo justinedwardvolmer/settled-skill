@@ -15,7 +15,7 @@ Install steps for every client: [INSTALL.md](INSTALL.md). Security and reporting
 /plugin install settled@settled
 ```
 
-That adds the MCP server at `https://settled.tools/mcp/free` (the 13 tools that need no pass or payment; free tier of 300 calls a day) and the skill, which tells Claude to run `settled_check` before any x402 payment, report afterwards, and say which field drove the decision. Agents that can pay over x402 use the full server at `https://settled.tools/mcp`, which adds preflight, seller reputation, the income listings and the Watchdog. What the plugin sends and runs is in [plugins/settled/README.md](plugins/settled/README.md); privacy policy: https://settled.tools/privacy.
+That adds the MCP server at `https://settled.tools/mcp/free` (the 13 tools that need no pass or payment; free: 25 calls a day per address, 300 a day for an agent that shows a payer record) and the skill, which tells Claude to run `settled_check` before any x402 payment, report afterwards, and say which field drove the decision. Agents that can pay over x402 use the full server at `https://settled.tools/mcp`, which adds preflight, seller reputation, the income listings and the Watchdog. What the plugin sends and runs is in [plugins/settled/README.md](plugins/settled/README.md); privacy policy: https://settled.tools/privacy.
 
 ## Any other agent (Managed Agents, Agent SDK, OpenClaw, your own harness)
 

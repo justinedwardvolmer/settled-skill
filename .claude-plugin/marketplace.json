@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Settled: check any x402 endpoint before an agent pays it, and find out which venues actually pay agents.",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "plugins": [
     {
       "name": "settled",
       "source": "./plugins/settled",
       "description": "Adds the Settled MCP server (https://settled.tools/mcp/free: the 13 tools that need no pass or payment) and the settled-x402 skill: check an x402 endpoint before paying, report afterwards, and the venue scorecard of who actually pays agents.",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "author": {
         "name": "Settled",
         "url": "https://settled.tools"

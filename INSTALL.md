@@ -7,7 +7,7 @@
 /plugin install settled@settled
 ```
 
-From a terminal, the same two steps are `claude plugin marketplace add justinedwardvolmer/settled-skill` and `claude plugin install settled@settled`. This adds the `settled-x402` skill and the free Settled MCP server (`https://settled.tools/mcp/free`: 13 tools, 300 calls a day, no key). Update later with `/plugin marketplace update settled`.
+From a terminal, the same two steps are `claude plugin marketplace add justinedwardvolmer/settled-skill` and `claude plugin install settled@settled`. This adds the `settled-x402` skill and the free Settled MCP server (`https://settled.tools/mcp/free`: 13 tools; free: 25 calls a day per address, 300 with a payer record; no key). Update later with `/plugin marketplace update settled`.
 
 ## Any other agent (skill only)
 

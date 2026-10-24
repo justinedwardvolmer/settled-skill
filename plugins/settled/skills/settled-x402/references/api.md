@@ -6,19 +6,20 @@ Base URL `https://settled.tools`. JSON everywhere. Every successful data respons
 
 | Route | Price | What it answers |
 | --- | --- | --- |
-| `GET /v1/free/check?url=` | free, 300/day | Everything below for one endpoint, from the index (cached ≤ 5 min) |
+| `GET /v1/free/check?url=` | free: 25/day per address, 300 with a payer record | Everything below for one endpoint, from the index (cached ≤ 5 min) |
 | `GET /v1/check?url=&force=1` | $0.002 | Same, with a fresh probe |
 | `GET /v1/preflight?url=` | $0.005 | Pre-spend check with `recommendation: pay / caution / avoid` and `reasons` |
-| `GET /v1/free/endpoints?q=&network=&max_price=&status=&sort=&limit=` | free, 300/day | Ranked live endpoints (`sort`: quality, price, latency, payers) |
+| `GET /v1/free/endpoints?q=&network=&max_price=&status=&sort=&limit=` | free: 50 searches/day, 150 with a payer record | Ranked live endpoints (`sort`: quality, price, latency, payers) |
 | `GET /v1/payto/{address}` | $0.005 | Seller reputation by wallet, with `settlement_integrity` |
 | `POST /v1/submit {"url"}` | free | Add an endpoint to the index |
 | `POST /v1/report {"url","tx","ok","signature"}` | free | Say whether a paid call worked (two-step, see SKILL.md) |
-| `POST /v1/pass` | $0.05 | 24-hour pass: every paid route except Watchdog, Seller Watch and re-test; 120 req/min |
+| `POST /v1/pass` | $0.05 | 24-hour pass: every paid route except Watchdog, Seller Watch and re-test; 120 req/min. `/v1/pass/month` $1.00 for 30 days, `/v1/pass/year` $10.00; `/v1/bundle/buyer` $5.00: the 30-day pass plus a Watchdog on up to 6 endpoints |
 | `GET /v1/income/venues` | free | Venue scorecard with verdicts |
 | `GET /v1/income?venue=&rail=&min_reward=` | $0.01 | Verified agent-income listings with honeypot flags |
 | `GET /v1/income/check?url=` | $0.01 | Honeypot / trust scan of one listing |
 | `GET /v1/events?limit=` | free | Change feed: verdict flips, new honeypots, integrity changes |
-| `POST /v1/watch {"url","webhook"?}` | $1.00 / 10 days | Watchdog: probe every 15 min, signed alert on any change to status, price or payTo |
+| `POST /v1/watch {"url","webhook"?}` | $2.00 / 30 days | Watchdog: probe every 15 min, signed alert on any change to status, price or payTo. `/v1/watch/year` $20.00; `/v1/watch/pack {"urls":[up to 10]}` $10.00 / 30 days |
+| `GET /v1/terms` | free | Every product's term length, price and how it renews; the price-change notice log (a rise is announced 30 days ahead); credits. Every 402 and receipt carries `x-settled-terms` |
 | `GET /v1/status` | free | Index size, freshness, ledger coverage |
 
 MCP server: `https://settled.tools/mcp` (Streamable HTTP). Tools mirror the routes: `settled_check`, `settled_preflight`, `settled_find_endpoints`, `settled_seller_reputation`, `settled_submit`, `settled_report`, `settled_income_venues`, `settled_income_listings`, `settled_income_check`, `settled_events`, `settled_watch`, `settled_watch_alerts`, `settled_verify`, `settled_status`, and more. Pass a day pass as the `x-settled-pass` header on the connection or as the `pass` argument.
