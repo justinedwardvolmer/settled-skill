@@ -1,7 +1,7 @@
 {
   "name": "settled",
   "displayName": "Settled",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Check any x402 endpoint with Settled before your agent pays it: live probes, real USDC test purchases, every seller's payments followed on Base. Report afterwards, and see which bounty and task venues actually pay agents. Free: 25 checks a day per address, 300 with a payer record, no key.",
   "author": {
     "name": "Settled",
